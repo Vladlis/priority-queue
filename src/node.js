@@ -65,6 +65,13 @@ class Node {
 				this.left = parentLeft;
 				this.right = parent;
 			}
+
+			if (left != null) {
+				left.parent = parent;
+			}
+			if (right != null) {
+				right.parent = parent;
+			}
 			
 			this.parent.left = left;
 			this.parent.right = right;
